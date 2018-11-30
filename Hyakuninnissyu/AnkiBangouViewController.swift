@@ -9,16 +9,43 @@
 import UIKit
 
 class AnkiBangouViewController: UIViewController {
+    
+    @IBOutlet var ichiAnkiButton: UIButton!
+    @IBOutlet var niAnkiButton: UIButton!
+    @IBOutlet var sanAnkiButton: UIButton!
+    @IBOutlet var yonAnkiButton: UIButton!
+    @IBOutlet var goAnkiButton: UIButton!
+    @IBOutlet var rokuAnkiButton: UIButton!
+    @IBOutlet var nanaAnkiButton: UIButton!
+    @IBOutlet var hachiAnkiButto:UIButton!
+    @IBOutlet var kyuuAnkiButton: UIButton!
+    @IBOutlet var juuAnkiButton: UIButton!
+    @IBOutlet var zenbuAnkiButton: UIButton!
+    @IBOutlet var checklistAnkiButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    // Segue 準備
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toAnkiTableViewController") {
+            let AnkiTableViewController = segue.destination as! AnkiTableViewController
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func ichiAnkiLabel() {
+        
+    }
+    
+    @IBAction func niAnkiLabel() {
+        
     }
     
 

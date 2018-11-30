@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D930ED3218C5A8D00288893 /* Hyakuninissyu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D930ED2218C5A8D00288893 /* Hyakuninissyu.swift */; };
+		7D930ED6218C614A00288893 /* QuizBangouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D930ED5218C614A00288893 /* QuizBangouViewController.swift */; };
+		7D930ED8218C62E500288893 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D930ED7218C62E500288893 /* QuizViewController.swift */; };
+		7D930EDA218C632F00288893 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D930ED9218C632F00288893 /* ResultViewController.swift */; };
+		7D930EDE219ECED600288893 /* AnkiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D930EDD219ECED600288893 /* AnkiTableViewController.swift */; };
+		7D930EE0219EDF8C00288893 /* AnkiTable2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D930EDF219EDF8C00288893 /* AnkiTable2ViewController.swift */; };
 		7DF638A4214BCA7D005CD338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF638A3214BCA7D005CD338 /* AppDelegate.swift */; };
 		7DF638A6214BCA7D005CD338 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF638A5214BCA7D005CD338 /* ViewController.swift */; };
 		7DF638A9214BCA7D005CD338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638A7214BCA7D005CD338 /* Main.storyboard */; };
@@ -17,20 +23,6 @@
 		7DF638D2214E7662005CD338 /* AnkiBangouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF638D1214E7662005CD338 /* AnkiBangouViewController.swift */; };
 		7DF638D4214E76C3005CD338 /* AnkiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF638D3214E76C3005CD338 /* AnkiViewController.swift */; };
 		7DF638D721677336005CD338 /* midorihaikei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638D621677336005CD338 /* midorihaikei.jpg */; };
-		7DF638E22168CBE6005CD338 /* Readme_ipaexm00201.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638DA2168CBE6005CD338 /* Readme_ipaexm00201.txt */; };
-		7DF638E32168CBE6005CD338 /* ipaexm.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638DB2168CBE6005CD338 /* ipaexm.ttf */; };
-		7DF638E42168CBE6005CD338 /* IPA_Font_License_Agreement_v1.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638DC2168CBE6005CD338 /* IPA_Font_License_Agreement_v1.0.txt */; };
-		7DF638E52168CBE6005CD338 /* UtsukushiFONT.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638DD2168CBE6005CD338 /* UtsukushiFONT.otf */; };
-		7DF638E62168CBE6005CD338 /* ReadMe.html in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638DE2168CBE6005CD338 /* ReadMe.html */; };
-		7DF638E72168CBE6005CD338 /* 02UtsukushiMincho.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638E02168CBE6005CD338 /* 02UtsukushiMincho.ttf */; };
-		7DF638E82168CBE6005CD338 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638E12168CBE6005CD338 /* ReadMe.txt */; };
-		7DF638F0216A1AB2005CD338 /* irohakakuC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638EA216A1AB2005CD338 /* irohakakuC-Regular.ttf */; };
-		7DF638F1216A1AB2005CD338 /* irohakakuC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638EB216A1AB2005CD338 /* irohakakuC-Bold.ttf */; };
-		7DF638F2216A1AB2005CD338 /* irohakakuC-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638EC216A1AB2005CD338 /* irohakakuC-ExtraLight.ttf */; };
-		7DF638F3216A1AB2005CD338 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638ED216A1AB2005CD338 /* readme.txt */; };
-		7DF638F4216A1AB2005CD338 /* irohakakuC-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638EE216A1AB2005CD338 /* irohakakuC-Light.ttf */; };
-		7DF638F5216A1AB2005CD338 /* irohakakuC-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638EF216A1AB2005CD338 /* irohakakuC-Medium.ttf */; };
-		7DF638F7216A1AE8005CD338 /* irohakakuC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638F6216A1AE7005CD338 /* irohakakuC-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D930ED2218C5A8D00288893 /* Hyakuninissyu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hyakuninissyu.swift; sourceTree = "<group>"; };
+		7D930ED5218C614A00288893 /* QuizBangouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBangouViewController.swift; sourceTree = "<group>"; };
+		7D930ED7218C62E500288893 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		7D930ED9218C632F00288893 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		7D930EDD219ECED600288893 /* AnkiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiTableViewController.swift; sourceTree = "<group>"; };
+		7D930EDF219EDF8C00288893 /* AnkiTable2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiTable2ViewController.swift; sourceTree = "<group>"; };
 		7DF638A0214BCA7D005CD338 /* Hyakuninnissyu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hyakuninnissyu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF638A3214BCA7D005CD338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DF638A5214BCA7D005CD338 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,20 +65,6 @@
 		7DF638D1214E7662005CD338 /* AnkiBangouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiBangouViewController.swift; sourceTree = "<group>"; };
 		7DF638D3214E76C3005CD338 /* AnkiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiViewController.swift; sourceTree = "<group>"; };
 		7DF638D621677336005CD338 /* midorihaikei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = midorihaikei.jpg; sourceTree = "<group>"; };
-		7DF638DA2168CBE6005CD338 /* Readme_ipaexm00201.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme_ipaexm00201.txt; sourceTree = "<group>"; };
-		7DF638DB2168CBE6005CD338 /* ipaexm.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ipaexm.ttf; sourceTree = "<group>"; };
-		7DF638DC2168CBE6005CD338 /* IPA_Font_License_Agreement_v1.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IPA_Font_License_Agreement_v1.0.txt; sourceTree = "<group>"; };
-		7DF638DD2168CBE6005CD338 /* UtsukushiFONT.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UtsukushiFONT.otf; sourceTree = "<group>"; };
-		7DF638DE2168CBE6005CD338 /* ReadMe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ReadMe.html; sourceTree = "<group>"; };
-		7DF638E02168CBE6005CD338 /* 02UtsukushiMincho.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 02UtsukushiMincho.ttf; sourceTree = "<group>"; };
-		7DF638E12168CBE6005CD338 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
-		7DF638EA216A1AB2005CD338 /* irohakakuC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "irohakakuC-Regular.ttf"; sourceTree = "<group>"; };
-		7DF638EB216A1AB2005CD338 /* irohakakuC-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "irohakakuC-Bold.ttf"; sourceTree = "<group>"; };
-		7DF638EC216A1AB2005CD338 /* irohakakuC-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "irohakakuC-ExtraLight.ttf"; sourceTree = "<group>"; };
-		7DF638ED216A1AB2005CD338 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
-		7DF638EE216A1AB2005CD338 /* irohakakuC-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "irohakakuC-Light.ttf"; sourceTree = "<group>"; };
-		7DF638EF216A1AB2005CD338 /* irohakakuC-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "irohakakuC-Medium.ttf"; sourceTree = "<group>"; };
-		7DF638F6216A1AE7005CD338 /* irohakakuC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "irohakakuC-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +92,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D930ED4218C611300288893 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		7DF63897214BCA7D005CD338 = {
 			isa = PBXGroup;
 			children = (
@@ -131,9 +122,7 @@
 		7DF638A2214BCA7D005CD338 /* Hyakuninnissyu */ = {
 			isa = PBXGroup;
 			children = (
-				7DF638F6216A1AE7005CD338 /* irohakakuC-Regular.ttf */,
-				7DF638E9216A1AB2005CD338 /* MODI_irohakakuC_2016_0904 */,
-				7DF638D82168CBE6005CD338 /* UtsukushiMincho-FONT */,
+				7D930ED4218C611300288893 /* New Group1 */,
 				7DF638D621677336005CD338 /* midorihaikei.jpg */,
 				7DF638D5216772B4005CD338 /* New Group */,
 				7DF638A3214BCA7D005CD338 /* AppDelegate.swift */,
@@ -144,6 +133,12 @@
 				7DF638AF214BCA80005CD338 /* Info.plist */,
 				7DF638D1214E7662005CD338 /* AnkiBangouViewController.swift */,
 				7DF638D3214E76C3005CD338 /* AnkiViewController.swift */,
+				7D930ED2218C5A8D00288893 /* Hyakuninissyu.swift */,
+				7D930ED5218C614A00288893 /* QuizBangouViewController.swift */,
+				7D930ED7218C62E500288893 /* QuizViewController.swift */,
+				7D930ED9218C632F00288893 /* ResultViewController.swift */,
+				7D930EDD219ECED600288893 /* AnkiTableViewController.swift */,
+				7D930EDF219EDF8C00288893 /* AnkiTable2ViewController.swift */,
 			);
 			path = Hyakuninnissyu;
 			sourceTree = "<group>";
@@ -171,49 +166,6 @@
 			children = (
 			);
 			path = "New Group";
-			sourceTree = "<group>";
-		};
-		7DF638D82168CBE6005CD338 /* UtsukushiMincho-FONT */ = {
-			isa = PBXGroup;
-			children = (
-				7DF638D92168CBE6005CD338 /* ipaexm */,
-				7DF638DD2168CBE6005CD338 /* UtsukushiFONT.otf */,
-				7DF638DE2168CBE6005CD338 /* ReadMe.html */,
-				7DF638DF2168CBE6005CD338 /* TrueTypeサポート外 */,
-				7DF638E12168CBE6005CD338 /* ReadMe.txt */,
-			);
-			path = "UtsukushiMincho-FONT";
-			sourceTree = "<group>";
-		};
-		7DF638D92168CBE6005CD338 /* ipaexm */ = {
-			isa = PBXGroup;
-			children = (
-				7DF638DA2168CBE6005CD338 /* Readme_ipaexm00201.txt */,
-				7DF638DB2168CBE6005CD338 /* ipaexm.ttf */,
-				7DF638DC2168CBE6005CD338 /* IPA_Font_License_Agreement_v1.0.txt */,
-			);
-			path = ipaexm;
-			sourceTree = "<group>";
-		};
-		7DF638DF2168CBE6005CD338 /* TrueTypeサポート外 */ = {
-			isa = PBXGroup;
-			children = (
-				7DF638E02168CBE6005CD338 /* 02UtsukushiMincho.ttf */,
-			);
-			path = "TrueTypeサポート外";
-			sourceTree = "<group>";
-		};
-		7DF638E9216A1AB2005CD338 /* MODI_irohakakuC_2016_0904 */ = {
-			isa = PBXGroup;
-			children = (
-				7DF638EA216A1AB2005CD338 /* irohakakuC-Regular.ttf */,
-				7DF638EB216A1AB2005CD338 /* irohakakuC-Bold.ttf */,
-				7DF638EC216A1AB2005CD338 /* irohakakuC-ExtraLight.ttf */,
-				7DF638ED216A1AB2005CD338 /* readme.txt */,
-				7DF638EE216A1AB2005CD338 /* irohakakuC-Light.ttf */,
-				7DF638EF216A1AB2005CD338 /* irohakakuC-Medium.ttf */,
-			);
-			path = MODI_irohakakuC_2016_0904;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,23 +272,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DF638F3216A1AB2005CD338 /* readme.txt in Resources */,
-				7DF638F7216A1AE8005CD338 /* irohakakuC-Regular.ttf in Resources */,
-				7DF638F2216A1AB2005CD338 /* irohakakuC-ExtraLight.ttf in Resources */,
-				7DF638F5216A1AB2005CD338 /* irohakakuC-Medium.ttf in Resources */,
-				7DF638E32168CBE6005CD338 /* ipaexm.ttf in Resources */,
 				7DF638AE214BCA80005CD338 /* LaunchScreen.storyboard in Resources */,
-				7DF638E72168CBE6005CD338 /* 02UtsukushiMincho.ttf in Resources */,
-				7DF638F1216A1AB2005CD338 /* irohakakuC-Bold.ttf in Resources */,
-				7DF638E42168CBE6005CD338 /* IPA_Font_License_Agreement_v1.0.txt in Resources */,
-				7DF638F4216A1AB2005CD338 /* irohakakuC-Light.ttf in Resources */,
 				7DF638AB214BCA80005CD338 /* Assets.xcassets in Resources */,
-				7DF638E52168CBE6005CD338 /* UtsukushiFONT.otf in Resources */,
 				7DF638D721677336005CD338 /* midorihaikei.jpg in Resources */,
-				7DF638F0216A1AB2005CD338 /* irohakakuC-Regular.ttf in Resources */,
-				7DF638E82168CBE6005CD338 /* ReadMe.txt in Resources */,
-				7DF638E22168CBE6005CD338 /* Readme_ipaexm00201.txt in Resources */,
-				7DF638E62168CBE6005CD338 /* ReadMe.html in Resources */,
 				7DF638A9214BCA7D005CD338 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,9 +301,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DF638A6214BCA7D005CD338 /* ViewController.swift in Sources */,
+				7D930ED8218C62E500288893 /* QuizViewController.swift in Sources */,
 				7DF638D4214E76C3005CD338 /* AnkiViewController.swift in Sources */,
+				7D930EDA218C632F00288893 /* ResultViewController.swift in Sources */,
+				7D930EDE219ECED600288893 /* AnkiTableViewController.swift in Sources */,
 				7DF638A4214BCA7D005CD338 /* AppDelegate.swift in Sources */,
+				7D930ED6218C614A00288893 /* QuizBangouViewController.swift in Sources */,
+				7D930ED3218C5A8D00288893 /* Hyakuninissyu.swift in Sources */,
 				7DF638D2214E7662005CD338 /* AnkiBangouViewController.swift in Sources */,
+				7D930EE0219EDF8C00288893 /* AnkiTable2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

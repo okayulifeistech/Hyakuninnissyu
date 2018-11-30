@@ -8,44 +8,82 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
+    
+    //StoryBoardで扱うTableViewを宣言
+    //@IBOutlet var table: UITableView!
     
     var hyakuninissyuArray: [Hyakuninissyu] = []
     
-    @IBOutlet var numberLabel: UILabel!
-    @IBOutlet var kamigoLabel: UILabel!
-    @IBOutlet var nakashichiLabel: UILabel!
-    @IBOutlet var shimogoLabel: UILabel!
-    @IBOutlet var shimonoku1Label: UILabel!
-    @IBOutlet var shimonoku2Label: UILabel!
-    @IBOutlet var sakusyaLabel: UILabel!
+    /*@IBOutlet var numberLabel: UILabel!
+    @IBOutlet var kanjiLabel: UILabel!
+    @IBOutlet var kanjisakusyaLabel: UILabel!
+    @IBOutlet var hiraganaLabel: UILabel!
+    @IBOutlet var hiraganasakusyaLabel: UILabel!
+    @IBOutlet var eigoLabel: UILabel!
+    @IBOutlet var eigosakusyaLabel: UILabel!
     @IBOutlet var imiLabel: UILabel!
-    @IBOutlet var kanadukai1Label: UILabel!
-    @IBOutlet var kanadukai2Label: UILabel!
-
+    /*@IBOutlet var kanadukai1Label: UILabel!
+     @IBOutlet var kanadukai2Label: UILabel!*/
+    
+    //表示する番号
+    var index: Int = 0*/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //TableViewのデータソースメソッドはViewControllerメソッドに書くよ、という設定
+        //table.dataSource = self
+        
+        hyakuninissyuArray.append(Hyakuninissyu(number: "1", kanji: "秋の田の", kanjisakusya: "仮庵の庵の", hiragana: "苫をあらみ", hiraganasakusya: "我が衣手は", eigo: "露にぬれつつ", eigosakusya: "天智天皇", imi: "" /*kanadukai1: "", kanadukai2: ""*/))
+         //setUI()
     }
+    //hyakuninissyuArray.append(Hyakuninissyu(number: "1", kanji: "秋の田の", kanjisakusya: "仮庵の庵の",hiragana: "苫をあらみ", hiraganasakusya: "我が衣手は", eigo: "露にぬれつつ", eigosakusya: "天智天皇", imi: "" /*kanadukai1: "", kanadukai2: ""*/))
     
-    hyakuninissyuArray.append(Hyakuninissyu(number: "1", kamigo: "秋の田の", nakashichi: "仮庵の庵の",shimogo: "苫をあらみ", shimonoku1: "我が衣手は", shimonoku2: "露にぬれつつ", sakusya: "天智天皇", imi: "", kanadukai1: "", kanadukai2: ""))
-    setUI()
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-}
-func setUI() {
-    numberLabel.text = hyakuninissyuArray[0].number
-    kamigoLabel.text = hyakuninissyuArray[0].kamigo
-    nakashichiLabal.text = hyakuninissyuArray[0].nakashichi
-    shimogoLabal.text = hyakuninkssyuArray[0].shimogo
-    shimonoku1Labal.text = hyakuninissyuArray[0].shimonoku1
-    shimonoku2Label.text = hyakuninissyuArray[0].shimonoku2
-    sakusyaLabel.text = hyakuninissyuArray[0].sakusya
-    imiLabel.text = hyakuninissyuArray[0].imi
-    kanadukai1Label.text = hyakuninissyuArray[0].kanadukai1
-    kanadukai2Label.text = hyakuninissyuArray[0].kanadukai2
+   /*
+    @IBAction func back() {
+        index = index - 1
+        setUI()
+    }
+    
+    @IBAction func front() {
+        index = index - 1
+        setUI()
+    }
+     */
+    /*
+    func setUI() {
+        numberLabel.text = hyakuninissyuArray[0].number
+        kanjiLabel.text = hyakuninissyuArray[0].kanji
+        kanjisakusyaLabel.text = hyakuninissyuArray[0].kanjisakusya
+        hiraganaLabel.text = hyakuninissyuArray[0].hiragana
+        hiraganasakusyaLabel.text = hyakuninissyuArray[0].hiraganasakusya
+        eigoLabel.text = hyakuninissyuArray[0].eigo
+        eigosakusyaLabel.text = hyakuninissyuArray[0].eigosakusya
+        imiLabel.text = hyakuninissyuArray[0].imi
+        /*kanadukai1Label.text = hyakuninissyuArray[0].kanadukai1
+         kanadukai2Label.text = hyakuninissyuArray[0].kanadukai2*/
+    }
+  */
+    
+    /*//セルの数を指定
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    //ID付きのセルを取得して、セル付属のtextLabelに「テスト」と表示させてみる
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        
+        cell?.textLabel?.text = "テスト"
+        
+        return cell!
+        
+    }*/
 }
