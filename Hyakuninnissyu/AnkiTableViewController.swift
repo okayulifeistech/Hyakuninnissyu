@@ -27,7 +27,7 @@ class AnkiTableViewController: UIViewController,UITableViewDataSource,UITableVie
     //StoryBoardで扱うTableViewを宣言
     @IBOutlet var table: UITableView!
     
-    //曲名を入れるための配列
+    //百人一首を入れるための配列
     var hyakuninissyu1Array = [String]()
 
     override func viewDidLoad() {
@@ -39,7 +39,7 @@ class AnkiTableViewController: UIViewController,UITableViewDataSource,UITableVie
         table.delegate = self
         
         //hyakuninissyu1-10Arrayに入れていく
-        hyakuninissyu1Array = ["1 秋の田の","2 春すぎて","3 あしびきの","4 田子の浦に","5 奥山に","6 かささぎに","7 天の原","8 我が庵は","9 花の色は","10 これやこの"]
+        hyakuninissyu1Array = ["1 秋の田の","2 春すぎて","3 あしびきの","4 田子の浦に","5 奥山に","6 かささぎに","7 天の原","8 我が庵は","9 花の色は","10 これやこの","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100"]
 
         // Do any additional setup after loading the view.
     }
@@ -70,7 +70,12 @@ class AnkiTableViewController: UIViewController,UITableViewDataSource,UITableVie
 //        let nextView: ViewController = storyboard?.instantiateViewController(withIdentifier: "nextView") as! ViewController
 //        self.present(nextView, animated: true, completion: nil)
         performSegue(withIdentifier: "toAnkiViewController", sender: nil)
+        
+        let ankiViewContoller = segue.destination as! AnkiViewController
+    ankiViewContoller.index = self.index as! Int// ラベルのインスタンス作成のため…ダサいw 他にいい手はないのか.
+        //11クイズを見れば正解の糸口がつかめるかも
     }
+        
     
 
     /*
