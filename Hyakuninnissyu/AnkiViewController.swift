@@ -75,6 +75,8 @@ class AnkiViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad() // Do any additional setup after loading the view.
+        
+        numberLabel.text = String(index)
     }
 
     override func didReceiveMemoryWarning() {
