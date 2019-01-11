@@ -22,16 +22,63 @@ class AnkiBangouViewController: UIViewController {
     @IBOutlet var juuAnkiButton: UIButton!
     @IBOutlet var zenbuAnkiButton: UIButton!
     @IBOutlet var checklistAnkiButton: UIButton!
-
+    var tappedTag: Int!
+    var selectIndex: Int!
+    var startIndex: Int!
+    var indexCount: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }
     // Segue 準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "toAnkiTableViewController") {
+        if (segue.identifier == "toAnkiTable") {
+            if tappedTag == 1 {
+                startIndex = 0
+                indexCount = 10
+            } else if tappedTag == 2 {
+                startIndex = 10
+                indexCount = 10
+            } else if tappedTag == 3 {
+                startIndex = 20
+                indexCount = 10
+            } else if tappedTag == 4 {
+                startIndex = 30
+                indexCount = 10
+            } else if tappedTag == 5 {
+                startIndex = 40
+                indexCount = 10
+            } else if tappedTag == 6 {
+                startIndex = 50
+                indexCount = 10
+            } else if tappedTag == 7 {
+                startIndex = 60
+                indexCount = 10
+            } else if tappedTag == 8 {
+                startIndex = 70
+                indexCount = 10
+            } else if tappedTag == 9 {
+                startIndex = 80
+                indexCount = 10
+            } else if tappedTag == 10 {
+                startIndex = 90
+                indexCount = 10
+            } else if tappedTag == 11 {
+                startIndex = 0
+                indexCount = 50
+            } else if tappedTag == 12 {
+                startIndex = 0
+                indexCount = 100
+            }
             let AnkiTableViewController = segue.destination as! AnkiTableViewController
+            //値の受け渡し(segue)のコードを書く
+            AnkiTableViewController.selectIndex = self.selectIndex
+            AnkiTableViewController.startIndex = self.startIndex
+            AnkiTableViewController.indexCount = self.indexCount
         }
     }
 
@@ -40,12 +87,21 @@ class AnkiBangouViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func ichiAnkiLabel() {
+    /*@IBAction func ichiAnkiLabel() {
         
     }
     
     @IBAction func niAnkiLabel() {
         
+    }*/
+    
+    @IBAction func toAnkiTable(sender: AnyObject) {
+        tappedTag = sender.tag
+        performSegue(withIdentifier: "toAnkiTable", sender: nil)
+    }
+    
+    @IBAction func modoru(){
+        self.dismiss(animated: true, completion: nil)
     }
     
 

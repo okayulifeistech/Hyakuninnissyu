@@ -36,7 +36,6 @@ class ViewController: UIViewController{
         //TableViewのデータソースメソッドはViewControllerメソッドに書くよ、という設定
         //table.dataSource = self
         
-        hyakuninissyuArray.append(Hyakuninissyu(number: "1", kanji: "秋の田の", kanjisakusya: "仮庵の庵の", hiragana: "苫をあらみ", hiraganasakusya: "我が衣手は", eigo: "露にぬれつつ", eigosakusya: "天智天皇", imi: "" /*kanadukai1: "", kanadukai2: ""*/))
          //setUI()
     }
     //hyakuninissyuArray.append(Hyakuninissyu(number: "1", kanji: "秋の田の", kanjisakusya: "仮庵の庵の",hiragana: "苫をあらみ", hiraganasakusya: "我が衣手は", eigo: "露にぬれつつ", eigosakusya: "天智天皇", imi: "" /*kanadukai1: "", kanadukai2: ""*/))

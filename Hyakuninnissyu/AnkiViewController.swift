@@ -8,44 +8,6 @@
 
 import UIKit
 
-//class Hyakuninissyu {
-//    
-//    var number: String!//百人一首の番号
-//    
-//    var kanji: String!//上五
-//    
-//    var kanjisakusya: String!//中七
-//    
-//    var hiragana: String!//下五
-//    
-//    var hiraganasakusya: String!//下の句上の段
-//    
-//    var eigo: String!//下の句下の段
-//    
-//    var eigosakusya: String!//作者
-//    
-//    var imi: String!//意味
-//    
-//    /*var kanadukai1: String!//仮名遣いの違う文字１行目
-//    
-//    var kanadukai2: String!//仮名遣いの違う文字２行目*/
-//    
-//    //初期化　引数でこれらをもらって設定している
-//    init(number: String, kanji: String,kanjisakusya : String, hiragana: String, hiraganasakusya: String, eigo: String, eigosakusya: String, imi: String /*kanadukai1: String, kanadukai2: String*/ ){
-//        self.number = number
-//        self.kanji = kanji
-//        self.kanjisakusya = kanjisakusya
-//        self.hiragana = hiragana
-//        self.hiraganasakusya = hiraganasakusya
-//        self.eigo = eigo
-//        self.eigosakusya = eigosakusya
-//        self.imi = imi
-//        /*self.kanadukai1 = kanadukai1
-//        self.kanadukai2 = kanadukai2*/
-//    }
-//}
-
-
 class AnkiViewController: UIViewController {
     
     @IBOutlet var numberLabel: UILabel!
@@ -56,27 +18,35 @@ class AnkiViewController: UIViewController {
     @IBOutlet var eigoLabel: UILabel!
     @IBOutlet var eigosakusyaLabel: UILabel!
     @IBOutlet var imiLabel: UILabel!
+    @IBOutlet weak var check: UIImageView!
     /*@IBOutlet var kanadukai1Label: UILabel!
      @IBOutlet var kanadukai2Label: UILabel!*/
-    
-    let numberArray: [String] = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100"]
-    let kanjiArray: [String] = ["秋の田の","春過ぎて","あしびきの","田子の浦に","奥山に","かささぎの","天の原","我が庵は","花の色は","これやこの","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]
-    let kanjisakusyaArray: [String] = ["天智天皇","持統天皇","柿本人麻呂","山部赤人","猿丸大夫","中納言家持","安倍仲麻呂","喜撰法師","小野小町","蝉丸"]
-    let hiraganaArray: [String] = ["あきのたの","はるすぎて","あしびきの","たごのうらに","おくやまに","かささぎの","あまのはら","わがいほは","はなのいろは","これやこの"]
-    let hiraganasakusyaArray: [String] = ["てんぢてんのう","じとうてんのう","かきもとのひとまろ","やまべのあかひと","さるまるだゆう","ちゅうなごんやかもち","あべのなかまろ","きせんほうし","おののこまち","せみまる"]
-    let eigoArray: [String] = ["akinotano","harusugite","ashibikino","tagonourani","okuyamani","kasasagino","amanohara","wagaiho(o)ha","hananoiroha","koreyakono"]
-    let eigosakusyaArray: [String] = ["tenditennnou","zitoutennnou","kakimotonohitomaro","yamabenoakahito","sarumarudayuu","tyuunagonnyakamoti","abenonakamaro","kisennhoushi","ononokomati","semimaru"]
-    let imiArray: [String] = ["p","p","p","p","p","p","p","p","p","p"]
-    
-    
+    var selectIndex: Int!
+    var startIndex: Int!
+    var indexCount: Int!
+    var numberArray = Hyakuninissyu().numberArray!
+    var kanjiArray = Hyakuninissyu().kanjiArray!
+    var kanjisakusyaArray = Hyakuninissyu().kanjisakusyaArray!
+    var hiraganaArray = Hyakuninissyu().hiraganaArray!
+    var hiraganasakusyaArray = Hyakuninissyu().hiraganasakusyaArray!
+    var eigoArray = Hyakuninissyu().eigoArray!
+    var eigosakusyaArray = Hyakuninissyu().eigosakusyaArray!
+    var imiArray = Hyakuninissyu().imiArray!
     //表示する番号
     var index: Int = 0
-    
+    var img = UIImage(named:"midorihaikei.jpg")!
 
     override func viewDidLoad() {
         super.viewDidLoad() // Do any additional setup after loading the view.
-        
-        numberLabel.text = String(index)
+        print(index)
+        print(startIndex)
+        numberLabel.text = numberArray[index - 1]
+        kanjiLabel.text = kanjiArray[index - 1]
+        kanjisakusyaLabel.text = kanjisakusyaArray[index - 1]
+        hiraganaLabel.text = hiraganaArray[index + startIndex - 1]
+        hiraganasakusyaLabel.text = hiraganasakusyaArray[index - 1]
+        eigoLabel.text = eigoArray[index - 1]
+        eigosakusyaLabel.text = eigosakusyaArray[index - 1]
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,72 +58,80 @@ class AnkiViewController: UIViewController {
     
     @IBAction func back(){
         //それぞれのラベルに配列の要素を追加する
-        numberLabel.text = numberArray[index]
-        kanjiLabel.text = kanjiArray[index]
-        kanjisakusyaLabel.text = kanjisakusyaArray[index]
-        hiraganaLabel.text = hiraganaArray[index]
-        hiraganasakusyaLabel.text = hiraganasakusyaArray[index]
-        eigoLabel.text = eigoArray[index]
-        eigosakusyaLabel.text = eigosakusyaArray[index]
+        numberLabel.text = numberArray[index + startIndex - 1]
+        kanjiLabel.text = kanjiArray[index + startIndex - 1]
+        kanjisakusyaLabel.text = kanjisakusyaArray[index + startIndex - 1]
+        hiraganaLabel.text = hiraganaArray[index + startIndex - 1]
+        hiraganasakusyaLabel.text = hiraganasakusyaArray[index + startIndex - 1]
+        eigoLabel.text = eigoArray[index + startIndex - 1]
+        eigosakusyaLabel.text = eigosakusyaArray[index + startIndex - 1]
         
         //indexの値を+1する
         index = index - 1
         
-        //indexの値が9より大きくなったら0に戻る
-        if index > 9 {
-            index = 0
+        //indexの値が0より小さくなったら9に戻る
+        if index < 1 {
+            index = 10
         }
         
-        //indexの値が0より小さくなったら9に戻る
-        if index < 0 {
-            index = 9
-        }
-        numberLabel.text = numberArray[index]
-        kanjiLabel.text = kanjiArray[index]
-        kanjisakusyaLabel.text = kanjisakusyaArray[index]
-        hiraganaLabel.text = hiraganaArray[index]
-        hiraganasakusyaLabel.text = hiraganasakusyaArray[index]
-        eigoLabel.text = eigoArray[index]
-        eigosakusyaLabel.text = eigosakusyaArray[index]
+        numberLabel.text = numberArray[index + startIndex - 1]
+        kanjiLabel.text = kanjiArray[index + startIndex - 1]
+        kanjisakusyaLabel.text = kanjisakusyaArray[index + startIndex - 1]
+        hiraganaLabel.text = hiraganaArray[index + startIndex - 1]
+        hiraganasakusyaLabel.text = hiraganasakusyaArray[index + startIndex - 1]
+        eigoLabel.text = eigoArray[index + startIndex - 1]
+        eigosakusyaLabel.text = eigosakusyaArray[index + startIndex - 1]
+        
+        print("\(index)が選択されました")
         
     }
     
     @IBAction func front(){
         //それぞれのラベルに配列の要素を追加する
-        numberLabel.text = numberArray[index]
-        kanjiLabel.text = kanjiArray[index]
-        kanjisakusyaLabel.text = kanjisakusyaArray[index]
-        hiraganaLabel.text = hiraganaArray[index]
-        hiraganasakusyaLabel.text = hiraganasakusyaArray[index]
-        eigoLabel.text = eigoArray[index]
-        eigosakusyaLabel.text = eigosakusyaArray[index]
+        numberLabel.text = numberArray[index + startIndex - 1]
+        kanjiLabel.text = kanjiArray[index + startIndex - 1]
+        kanjisakusyaLabel.text = kanjisakusyaArray[index + startIndex - 1]
+        hiraganaLabel.text = hiraganaArray[index + startIndex - 1]
+        hiraganasakusyaLabel.text = hiraganasakusyaArray[index + startIndex - 1]
+        eigoLabel.text = eigoArray[index + startIndex - 1]
+        eigosakusyaLabel.text = eigosakusyaArray[index + startIndex - 1]
         
         //indexの値を+1する
         index = index + 1
     
     //indexの値が9より大きくなったら0に戻る
-    if index > 9 {
-    index = 0
+    if index > startIndex + indexCount {
+    index = startIndex + 1
     }
         
-        numberLabel.text = numberArray[index]
-        kanjiLabel.text = kanjiArray[index]
-        kanjisakusyaLabel.text = kanjisakusyaArray[index]
-        hiraganaLabel.text = hiraganaArray[index]
-        hiraganasakusyaLabel.text = hiraganasakusyaArray[index]
-        eigoLabel.text = eigoArray[index]
-        eigosakusyaLabel.text = eigosakusyaArray[index]
+        numberLabel.text = numberArray[index + startIndex - 1]
+        kanjiLabel.text = kanjiArray[index + startIndex - 1]
+        kanjisakusyaLabel.text = kanjisakusyaArray[index + startIndex - 1]
+        hiraganaLabel.text = hiraganaArray[index + startIndex - 1]
+        hiraganasakusyaLabel.text = hiraganasakusyaArray[index + startIndex - 1]
+        eigoLabel.text = eigoArray[index + startIndex - 1]
+        eigosakusyaLabel.text = eigosakusyaArray[index + startIndex - 1]
         
-        
+        print("\(index)が選択されました")
         
     }
     
-    @IBAction func modoru(){
-        //画面を戻るコード
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
-
+    func changeVisible(visible: Bool) {
+        if visible {
+            check.isHidden = false
+        } else {
+            check.isHidden = true
+        }
     }
 
+    
+    @IBAction func add(_ sender: Any) {
+        //if check.is {
+        changeVisible(visible: true)
+        check.image = img
+        /*} else {
+            
+        }*/
     
 
     /*
