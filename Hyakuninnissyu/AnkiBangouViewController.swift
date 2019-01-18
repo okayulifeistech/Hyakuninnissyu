@@ -30,9 +30,13 @@ class AnkiBangouViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     // Segue 準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

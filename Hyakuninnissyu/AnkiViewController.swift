@@ -18,7 +18,8 @@ class AnkiViewController: UIViewController {
     @IBOutlet var eigoLabel: UILabel!
     @IBOutlet var eigosakusyaLabel: UILabel!
     @IBOutlet var imiLabel: UILabel!
-    @IBOutlet weak var check: UIImageView!
+    @IBOutlet weak var changeImageView: UIImageView!
+    let checkImage = UIImage(named: "check.png")
     /*@IBOutlet var kanadukai1Label: UILabel!
      @IBOutlet var kanadukai2Label: UILabel!*/
     var selectIndex: Int!
@@ -70,11 +71,11 @@ class AnkiViewController: UIViewController {
         index = index - 1
         
         //indexの値が0より小さくなったら9に戻る
-        if index < 1 {
-            index = 10
+        if index < startIndex + 1 {
+            index = startIndex + indexCount
         }
         
-        numberLabel.text = numberArray[index + startIndex - 1]
+        numberLabel.text = numberArray[index + /*startIndex*/ -1]
         kanjiLabel.text = kanjiArray[index + startIndex - 1]
         kanjisakusyaLabel.text = kanjisakusyaArray[index + startIndex - 1]
         hiraganaLabel.text = hiraganaArray[index + startIndex - 1]
@@ -104,7 +105,7 @@ class AnkiViewController: UIViewController {
     index = startIndex + 1
     }
         
-        numberLabel.text = numberArray[index + startIndex - 1]
+        numberLabel.text = numberArray[index /*+ startIndex*/ - 1]
         kanjiLabel.text = kanjiArray[index + startIndex - 1]
         kanjisakusyaLabel.text = kanjisakusyaArray[index + startIndex - 1]
         hiraganaLabel.text = hiraganaArray[index + startIndex - 1]
@@ -116,23 +117,26 @@ class AnkiViewController: UIViewController {
         
     }
     
-    func changeVisible(visible: Bool) {
+    /*func changeVisible(visible: Bool) {
         if visible {
-            check.isHidden = false
+            View.isHidden = false
         } else {
-            check.isHidden = true
+            View.isHidden = true
         }
-    }
+    }*/
 
     
-    @IBAction func add(_ sender: Any) {
+    @IBAction func check(_ sender: Any) {
+        if changeImageView.image == nil{
+            changeImageView.image = nil
+        }
+    }
         //if check.is {
-        changeVisible(visible: true)
-        check.image = img
+        //changeVisible(visible: true)
+        //check.image = img
         /*} else {
             
         }*/
-    
 
     /*
     // MARK: - Navigation
@@ -143,5 +147,4 @@ class AnkiViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
+ }

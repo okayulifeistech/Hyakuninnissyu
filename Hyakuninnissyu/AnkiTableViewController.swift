@@ -9,6 +9,7 @@
 import UIKit
 
 class AnkiTableViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
     //セクション毎の行の数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return indexCount
@@ -34,6 +35,8 @@ class AnkiTableViewController: UIViewController,UITableViewDataSource,UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         //TableViewのデータソースメソッドはAnkiTableViewControllerに書くよ、という設定
         table.dataSource = self
         

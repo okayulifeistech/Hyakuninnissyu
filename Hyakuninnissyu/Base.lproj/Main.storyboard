@@ -1535,7 +1535,7 @@
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="1000"/>
                     <size key="freeformSize" width="320" height="1100"/>
                     <connections>
-                        <outlet property="check" destination="VfS-eC-KCz" id="CyQ-A1-wXa"/>
+                        <outlet property="changeImageView" destination="VfS-eC-KCz" id="VaE-92-Hok"/>
                         <outlet property="eigoLabel" destination="tjL-Wz-vut" id="LIO-lZ-a1V"/>
                         <outlet property="eigosakusyaLabel" destination="xSe-HT-w9O" id="dJ6-xl-FNM"/>
                         <outlet property="hiraganaLabel" destination="ZxM-6g-2KU" id="4jA-7W-ClJ"/>
@@ -1548,7 +1548,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTC-Ay-YRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3390" y="-389.78873239436621"/>
+            <point key="canvasLocation" x="4757" y="-408"/>
         </scene>
         <!--Anki View Controller-->
         <scene sceneID="Etc-cp-PeE">
