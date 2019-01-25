@@ -10,6 +10,8 @@ import UIKit
 
 class AnkiViewController: UIViewController {
     
+    var saveData:UserDefaults = UserDefaults.standard
+    
     @IBOutlet var numberLabel: UILabel!
     @IBOutlet var kanjiLabel: UILabel!
     @IBOutlet var kanjisakusyaLabel: UILabel!
@@ -19,7 +21,7 @@ class AnkiViewController: UIViewController {
     @IBOutlet var eigosakusyaLabel: UILabel!
     @IBOutlet var imiLabel: UILabel!
     @IBOutlet weak var changeImageView: UIImageView!
-    let checkImage = UIImage(named: "check.png")
+    let checkImage = UIImage(named: "midorihaikei.jpg")
     /*@IBOutlet var kanadukai1Label: UILabel!
      @IBOutlet var kanadukai2Label: UILabel!*/
     var selectIndex: Int!
@@ -33,10 +35,11 @@ class AnkiViewController: UIViewController {
     var eigoArray = Hyakuninissyu().eigoArray!
     var eigosakusyaArray = Hyakuninissyu().eigosakusyaArray!
     var imiArray = Hyakuninissyu().imiArray!
+    var checkArray = Hyakuninissyu().checkArray
     //表示する番号
     var index: Int = 0
     var img = UIImage(named:"midorihaikei.jpg")!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad() // Do any additional setup after loading the view.
         print(index)
@@ -44,12 +47,18 @@ class AnkiViewController: UIViewController {
         numberLabel.text = numberArray[index - 1]
         kanjiLabel.text = kanjiArray[index - 1]
         kanjisakusyaLabel.text = kanjisakusyaArray[index - 1]
-        hiraganaLabel.text = hiraganaArray[index + startIndex - 1]
+        hiraganaLabel.text = hiraganaArray[index - 1]
         hiraganasakusyaLabel.text = hiraganasakusyaArray[index - 1]
         eigoLabel.text = eigoArray[index - 1]
         eigosakusyaLabel.text = eigosakusyaArray[index - 1]
+        
+        checkArray = saveData.object(forKey: "check") as! [String]
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if 
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -59,13 +68,13 @@ class AnkiViewController: UIViewController {
     
     @IBAction func back(){
         //それぞれのラベルに配列の要素を追加する
-        numberLabel.text = numberArray[index + startIndex - 1]
-        kanjiLabel.text = kanjiArray[index + startIndex - 1]
-        kanjisakusyaLabel.text = kanjisakusyaArray[index + startIndex - 1]
-        hiraganaLabel.text = hiraganaArray[index + startIndex - 1]
-        hiraganasakusyaLabel.text = hiraganasakusyaArray[index + startIndex - 1]
-        eigoLabel.text = eigoArray[index + startIndex - 1]
-        eigosakusyaLabel.text = eigosakusyaArray[index + startIndex - 1]
+        numberLabel.text = numberArray[index - 1]
+        kanjiLabel.text = kanjiArray[index - 1]
+        kanjisakusyaLabel.text = kanjisakusyaArray[index - 1]
+        hiraganaLabel.text = hiraganaArray[index - 1]
+        hiraganasakusyaLabel.text = hiraganasakusyaArray[index - 1]
+        eigoLabel.text = eigoArray[index - 1]
+        eigosakusyaLabel.text = eigosakusyaArray[index - 1]
         
         //indexの値を+1する
         index = index - 1
@@ -75,13 +84,13 @@ class AnkiViewController: UIViewController {
             index = startIndex + indexCount
         }
         
-        numberLabel.text = numberArray[index + /*startIndex*/ -1]
-        kanjiLabel.text = kanjiArray[index + startIndex - 1]
-        kanjisakusyaLabel.text = kanjisakusyaArray[index + startIndex - 1]
-        hiraganaLabel.text = hiraganaArray[index + startIndex - 1]
-        hiraganasakusyaLabel.text = hiraganasakusyaArray[index + startIndex - 1]
-        eigoLabel.text = eigoArray[index + startIndex - 1]
-        eigosakusyaLabel.text = eigosakusyaArray[index + startIndex - 1]
+        numberLabel.text = numberArray[index - 1]
+        kanjiLabel.text = kanjiArray[index - 1]
+        kanjisakusyaLabel.text = kanjisakusyaArray[index - 1]
+        hiraganaLabel.text = hiraganaArray[index - 1]
+        hiraganasakusyaLabel.text = hiraganasakusyaArray[index - 1]
+        eigoLabel.text = eigoArray[index - 1]
+        eigosakusyaLabel.text = eigosakusyaArray[index - 1]
         
         print("\(index)が選択されました")
         
@@ -89,62 +98,74 @@ class AnkiViewController: UIViewController {
     
     @IBAction func front(){
         //それぞれのラベルに配列の要素を追加する
-        numberLabel.text = numberArray[index + startIndex - 1]
-        kanjiLabel.text = kanjiArray[index + startIndex - 1]
-        kanjisakusyaLabel.text = kanjisakusyaArray[index + startIndex - 1]
-        hiraganaLabel.text = hiraganaArray[index + startIndex - 1]
-        hiraganasakusyaLabel.text = hiraganasakusyaArray[index + startIndex - 1]
-        eigoLabel.text = eigoArray[index + startIndex - 1]
-        eigosakusyaLabel.text = eigosakusyaArray[index + startIndex - 1]
+        numberLabel.text = numberArray[index - 1]
+        kanjiLabel.text = kanjiArray[index - 1]
+        kanjisakusyaLabel.text = kanjisakusyaArray[index - 1]
+        hiraganaLabel.text = hiraganaArray[index - 1]
+        hiraganasakusyaLabel.text = hiraganasakusyaArray[index - 1]
+        eigoLabel.text = eigoArray[index - 1]
+        eigosakusyaLabel.text = eigosakusyaArray[index - 1]
         
         //indexの値を+1する
         index = index + 1
-    
-    //indexの値が9より大きくなったら0に戻る
-    if index > startIndex + indexCount {
-    index = startIndex + 1
-    }
         
-        numberLabel.text = numberArray[index /*+ startIndex*/ - 1]
-        kanjiLabel.text = kanjiArray[index + startIndex - 1]
-        kanjisakusyaLabel.text = kanjisakusyaArray[index + startIndex - 1]
-        hiraganaLabel.text = hiraganaArray[index + startIndex - 1]
-        hiraganasakusyaLabel.text = hiraganasakusyaArray[index + startIndex - 1]
-        eigoLabel.text = eigoArray[index + startIndex - 1]
-        eigosakusyaLabel.text = eigosakusyaArray[index + startIndex - 1]
+        //indexの値が9より大きくなったら0に戻る
+        if index > startIndex + indexCount {
+            index = startIndex + 1
+        }
+        
+        numberLabel.text = numberArray[index - 1]
+        kanjiLabel.text = kanjiArray[index - 1]
+        kanjisakusyaLabel.text = kanjisakusyaArray[index - 1]
+        hiraganaLabel.text = hiraganaArray[index - 1]
+        hiraganasakusyaLabel.text = hiraganasakusyaArray[index - 1]
+        eigoLabel.text = eigoArray[index - 1]
+        eigosakusyaLabel.text = eigosakusyaArray[index - 1]
         
         print("\(index)が選択されました")
         
     }
     
     /*func changeVisible(visible: Bool) {
-        if visible {
-            View.isHidden = false
-        } else {
-            View.isHidden = true
-        }
-    }*/
-
+     if visible {
+     View.isHidden = false
+     } else {
+     View.isHidden = true
+     }
+     }*/
+    
     
     @IBAction func check(_ sender: Any) {
         if changeImageView.image == nil{
+            changeImageView.image = checkImage
+        } else if changeImageView.image == checkImage {
             changeImageView.image = nil
         }
+        checkArray[index - 1] = "1"
+        saveData.set(checkArray, forKey: "check")
+        print(checkArray)
     }
+        
+//        for i in 0...99 {
+//            if checkArray[i] = 1 {
+//                //表示
+//            }
+//        }
         //if check.is {
         //changeVisible(visible: true)
         //check.image = img
         /*} else {
-            
-        }*/
+         
+         }*/
+        
+        /*
+         // MARK: - Navigation
+         
+         // In a storyboard-based application, you will often want to do a little preparation before navigation
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destinationViewController.
+         // Pass the selected object to the new view controller.
+         }
+         */
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
- }

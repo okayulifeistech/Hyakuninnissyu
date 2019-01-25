@@ -10,6 +10,8 @@ import UIKit
 
 class AnkiBangouViewController: UIViewController {
     
+    var saveData:UserDefaults = UserDefaults.standard
+    
     @IBOutlet var ichiAnkiButton: UIButton!
     @IBOutlet var niAnkiButton: UIButton!
     @IBOutlet var sanAnkiButton: UIButton!
@@ -26,8 +28,18 @@ class AnkiBangouViewController: UIViewController {
     var selectIndex: Int!
     var startIndex: Int!
     var indexCount: Int!
+    var checkArray :[String] = []//checkList用の配列
     
     override func viewDidLoad() {
+        
+        for _ in 0...99 {
+            checkArray.append("0")
+        }
+        
+        saveData.set(checkArray, forKey: "check")
+        
+        print(checkArray)
+        
         super.viewDidLoad()
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -36,6 +48,12 @@ class AnkiBangouViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        if checkArray[index - 1] == 1 {
+            changeImageView.image = nil
+        } else if checkArray[index - 1] == 0 {
+            changeImageView.image = chengeImage
+        }
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     // Segue 準備
