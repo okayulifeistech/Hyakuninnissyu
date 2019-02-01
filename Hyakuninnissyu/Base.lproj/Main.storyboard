@@ -131,7 +131,7 @@
                                 <rect key="frame" x="16" y="65" width="288" height="435"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <mutableString key="text">●Hyakunin Isshu（百人一首）&lt;another name: Uta-garuta (歌ガルタ) &gt;
+                                <string key="text">●Hyakunin Isshu（百人一首）&lt;another name: Uta-garuta (歌ガルタ) &gt;
 
 Hyakunin Isshu are a kind of karuta, Japanese traditional playing cards.
 It is also the name of the game in which they are used.
@@ -141,7 +141,7 @@ The standard collection of the poems used is called Hyakunin Isshu,
 which is often also the name of the game.
 The collection was chosen by a poet Fujiwara no Teika in Heian period. 
 There are national conventions for the game.
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1100,6 +1100,9 @@ There are national conventions for the game.
                                 <state key="normal" title="Check List">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkList" destination="GKA-yo-tbz" eventType="touchUpInside" id="DoY-58-pfy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGf-Ua-Wzy">
                                 <rect key="frame" x="18" y="444" width="285" height="40"/>
@@ -1359,7 +1362,7 @@ There are national conventions for the game.
                                                     <action selector="front" destination="PUa-4O-X8g" eventType="touchUpInside" id="g6B-L1-ehf"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="秋の田の 仮庵の庵の 苫をあらみ 我が衣手は 露にぬれつつ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojR-u0-kyz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="秋の田の 仮庵の庵の 苫をあらみ 我が衣手は 露にぬれつつ" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojR-u0-kyz">
                                                 <rect key="frame" x="22" y="150" width="275" height="150"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1367,7 +1370,7 @@ There are national conventions for the game.
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="あきのたの" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxM-6g-2KU">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="あきのたの" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxM-6g-2KU">
                                                 <rect key="frame" x="22" y="320" width="275" height="150"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1382,7 +1385,7 @@ There are national conventions for the game.
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Akinotano" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjL-Wz-vut">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Akinotano" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjL-Wz-vut">
                                                 <rect key="frame" x="22" y="490" width="275" height="150"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1390,24 +1393,8 @@ There are national conventions for the game.
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meaning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNC-S7-rdX">
-                                                <rect key="frame" x="22" y="660" width="120" height="25"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPs-HU-Sa3">
-                                                <rect key="frame" x="22" y="685" width="275" height="130"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmj-Rh-0ya">
-                                                <rect key="frame" x="22" y="835" width="35" height="35"/>
+                                                <rect key="frame" x="27" y="905" width="35" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1415,7 +1402,7 @@ There are national conventions for the game.
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bw6-Nc-XHW">
-                                                <rect key="frame" x="69" y="835" width="180" height="35"/>
+                                                <rect key="frame" x="108" y="905" width="180" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1427,7 +1414,7 @@ There are national conventions for the game.
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Write  a  note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxi-Rv-c8k">
-                                                <rect key="frame" x="22" y="885" width="114" height="25"/>
+                                                <rect key="frame" x="28" y="965" width="114" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1435,7 +1422,7 @@ There are national conventions for the game.
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G3y-0U-3Mg">
-                                                <rect key="frame" x="22" y="910" width="275" height="30"/>
+                                                <rect key="frame" x="27" y="988" width="275" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1491,9 +1478,18 @@ There are national conventions for the game.
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-eC-KCz">
-                                                <rect key="frame" x="22" y="835" width="35" height="35"/>
+                                                <rect key="frame" x="27" y="905" width="35" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPs-HU-Sa3">
+                                                <rect key="frame" x="22" y="660" width="275" height="232"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <mutableString key="text">あ→a い→ i う→u え→e お→o か→ka き→ki く→ku け→ke こ→ko さ→sa し→shi す→su せ→se そ→so た→ta ち→chi つ→tsu て→te と→to な→na に→ni ぬ→nu ね→ne の→no は→ha ひ→hi ふ→fu へ→he ほ→ho ま→ma み→mi む→mu め→me も→mo や→ya い→i ゆ→yu え→e よ→yo ら→ra り→ri る→ru れ→re ろ→ro わ→wa ゐ→wi う→u ゑ→we を→wo ん→n が→ga ぎ→gi ぐ→gu げ→ge ご→go ざ→za じ→ji ず→zu ぜ→ze ぞ→zo</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1551,7 +1547,6 @@ There are national conventions for the game.
                         <outlet property="eigosakusyaLabel" destination="xSe-HT-w9O" id="dJ6-xl-FNM"/>
                         <outlet property="hiraganaLabel" destination="ZxM-6g-2KU" id="4jA-7W-ClJ"/>
                         <outlet property="hiraganasakusyaLabel" destination="bAK-kr-QJp" id="Vag-nh-hbW"/>
-                        <outlet property="imiLabel" destination="LPs-HU-Sa3" id="ZgT-KT-um8"/>
                         <outlet property="kanjiLabel" destination="ojR-u0-kyz" id="j0y-go-yBr"/>
                         <outlet property="kanjisakusyaLabel" destination="y2U-mb-PjP" id="T5K-k3-i3G"/>
                         <outlet property="numberLabel" destination="xQP-ck-W1j" id="ea9-yT-Pcb"/>
@@ -1559,7 +1554,7 @@ There are national conventions for the game.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTC-Ay-YRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4757" y="-408"/>
+            <point key="canvasLocation" x="4756.875" y="-408.80281690140845"/>
         </scene>
         <!--Anki View Controller-->
         <scene sceneID="Etc-cp-PeE">

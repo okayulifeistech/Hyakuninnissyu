@@ -56,7 +56,13 @@ class AnkiViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if 
+        checkArray = saveData.object(forKey: "check") as! [String]
+        
+        if checkArray[index-1] == "1" {
+            changeImageView.image = checkImage
+        } else if checkArray[index-1] == "0" {
+            changeImageView.image = nil
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -138,10 +144,11 @@ class AnkiViewController: UIViewController {
     @IBAction func check(_ sender: Any) {
         if changeImageView.image == nil{
             changeImageView.image = checkImage
+            checkArray[index - 1] = "1"
         } else if changeImageView.image == checkImage {
             changeImageView.image = nil
+            checkArray[index - 1] = "0"
         }
-        checkArray[index - 1] = "1"
         saveData.set(checkArray, forKey: "check")
         print(checkArray)
     }

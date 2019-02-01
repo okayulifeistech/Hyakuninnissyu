@@ -48,12 +48,6 @@ class AnkiBangouViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        if checkArray[index - 1] == 1 {
-            changeImageView.image = nil
-        } else if checkArray[index - 1] == 0 {
-            changeImageView.image = chengeImage
-        }
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     // Segue 準備
@@ -126,6 +120,11 @@ class AnkiBangouViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func checkList(){
+        
+}
+    
+    
 
     /*
     // MARK: - Navigation
@@ -136,5 +135,4 @@ class AnkiBangouViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
