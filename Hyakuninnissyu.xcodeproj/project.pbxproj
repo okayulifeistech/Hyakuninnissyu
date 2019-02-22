@@ -13,6 +13,11 @@
 		7D930EDA218C632F00288893 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D930ED9218C632F00288893 /* ResultViewController.swift */; };
 		7D930EDE219ECED600288893 /* AnkiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D930EDD219ECED600288893 /* AnkiTableViewController.swift */; };
 		7D930EE0219EDF8C00288893 /* AnkiTable2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D930EDF219EDF8C00288893 /* AnkiTable2ViewController.swift */; };
+		7DC49FB2220D979D0077E7A5 /* ExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC49FB1220D979C0077E7A5 /* ExplanationViewController.swift */; };
+		7DC49FB42216C3FC0077E7A5 /* midorihaikeigimp.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DC49FB32216C3FC0077E7A5 /* midorihaikeigimp.png */; };
+		7DC49FB72216D2330077E7A5 /* midorihaikeiLong.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DC49FB52216D21F0077E7A5 /* midorihaikeiLong.png */; };
+		7DC49FB82216D2330077E7A5 /* midorihaikeiLongLong.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DC49FB62216D2290077E7A5 /* midorihaikeiLongLong.png */; };
+		7DC49FBA221975C60077E7A5 /* TegakiCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DC49FB9221975C40077E7A5 /* TegakiCheck.png */; };
 		7DF638A4214BCA7D005CD338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF638A3214BCA7D005CD338 /* AppDelegate.swift */; };
 		7DF638A6214BCA7D005CD338 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF638A5214BCA7D005CD338 /* ViewController.swift */; };
 		7DF638A9214BCA7D005CD338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF638A7214BCA7D005CD338 /* Main.storyboard */; };
@@ -49,6 +54,11 @@
 		7D930ED9218C632F00288893 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		7D930EDD219ECED600288893 /* AnkiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiTableViewController.swift; sourceTree = "<group>"; };
 		7D930EDF219EDF8C00288893 /* AnkiTable2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiTable2ViewController.swift; sourceTree = "<group>"; };
+		7DC49FB1220D979C0077E7A5 /* ExplanationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationViewController.swift; sourceTree = "<group>"; };
+		7DC49FB32216C3FC0077E7A5 /* midorihaikeigimp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = midorihaikeigimp.png; sourceTree = "<group>"; };
+		7DC49FB52216D21F0077E7A5 /* midorihaikeiLong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = midorihaikeiLong.png; sourceTree = "<group>"; };
+		7DC49FB62216D2290077E7A5 /* midorihaikeiLongLong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = midorihaikeiLongLong.png; sourceTree = "<group>"; };
+		7DC49FB9221975C40077E7A5 /* TegakiCheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TegakiCheck.png; sourceTree = "<group>"; };
 		7DF638A0214BCA7D005CD338 /* Hyakuninnissyu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hyakuninnissyu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF638A3214BCA7D005CD338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DF638A5214BCA7D005CD338 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +132,10 @@
 		7DF638A2214BCA7D005CD338 /* Hyakuninnissyu */ = {
 			isa = PBXGroup;
 			children = (
+				7DC49FB9221975C40077E7A5 /* TegakiCheck.png */,
+				7DC49FB52216D21F0077E7A5 /* midorihaikeiLong.png */,
+				7DC49FB62216D2290077E7A5 /* midorihaikeiLongLong.png */,
+				7DC49FB32216C3FC0077E7A5 /* midorihaikeigimp.png */,
 				7D930ED4218C611300288893 /* New Group1 */,
 				7DF638D621677336005CD338 /* midorihaikei.jpg */,
 				7DF638D5216772B4005CD338 /* New Group */,
@@ -139,6 +153,7 @@
 				7D930ED9218C632F00288893 /* ResultViewController.swift */,
 				7D930EDD219ECED600288893 /* AnkiTableViewController.swift */,
 				7D930EDF219EDF8C00288893 /* AnkiTable2ViewController.swift */,
+				7DC49FB1220D979C0077E7A5 /* ExplanationViewController.swift */,
 			);
 			path = Hyakuninnissyu;
 			sourceTree = "<group>";
@@ -276,6 +291,10 @@
 				7DF638AB214BCA80005CD338 /* Assets.xcassets in Resources */,
 				7DF638D721677336005CD338 /* midorihaikei.jpg in Resources */,
 				7DF638A9214BCA7D005CD338 /* Main.storyboard in Resources */,
+				7DC49FB82216D2330077E7A5 /* midorihaikeiLongLong.png in Resources */,
+				7DC49FBA221975C60077E7A5 /* TegakiCheck.png in Resources */,
+				7DC49FB72216D2330077E7A5 /* midorihaikeiLong.png in Resources */,
+				7DC49FB42216C3FC0077E7A5 /* midorihaikeigimp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DC49FB2220D979D0077E7A5 /* ExplanationViewController.swift in Sources */,
 				7DF638A6214BCA7D005CD338 /* ViewController.swift in Sources */,
 				7D930ED8218C62E500288893 /* QuizViewController.swift in Sources */,
 				7DF638D4214E76C3005CD338 /* AnkiViewController.swift in Sources */,

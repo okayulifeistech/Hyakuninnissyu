@@ -59,7 +59,7 @@ class QuizViewController: UIViewController {
         let tmpArray = quizArray[0] as! [Any]
         
         //問題文のテキストを表示
-        quizTextView.text = tmpArray[0] as! String
+        quizTextView.text = tmpArray[0] as? String
         
         //選択肢のボタンにそれぞれせ選択肢のテキストをセット
         choiceButton1.setTitle(tmpArray[1] as? String, for: .normal)

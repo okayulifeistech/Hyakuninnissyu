@@ -21,7 +21,7 @@ class AnkiViewController: UIViewController {
     @IBOutlet var eigosakusyaLabel: UILabel!
     @IBOutlet var imiLabel: UILabel!
     @IBOutlet weak var changeImageView: UIImageView!
-    let checkImage = UIImage(named: "midorihaikei.jpg")
+    let checkImage = UIImage(named: "TegakiCheck.png")
     /*@IBOutlet var kanadukai1Label: UILabel!
      @IBOutlet var kanadukai2Label: UILabel!*/
     var selectIndex: Int!
@@ -38,7 +38,7 @@ class AnkiViewController: UIViewController {
     var checkArray = Hyakuninissyu().checkArray
     //表示する番号
     var index: Int = 0
-    var img = UIImage(named:"midorihaikei.jpg")!
+    var img = UIImage(named:"TegakiCheck.png")!
     
     override func viewDidLoad() {
         super.viewDidLoad() // Do any additional setup after loading the view.

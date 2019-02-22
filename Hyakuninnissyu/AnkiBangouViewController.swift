@@ -23,7 +23,7 @@ class AnkiBangouViewController: UIViewController {
     @IBOutlet var kyuuAnkiButton: UIButton!
     @IBOutlet var juuAnkiButton: UIButton!
     @IBOutlet var zenbuAnkiButton: UIButton!
-    @IBOutlet var checklistAnkiButton: UIButton!
+    //@IBOutlet var checklistAnkiButton: UIButton!
     var tappedTag: Int!
     var selectIndex: Int!
     var startIndex: Int!
@@ -87,6 +87,9 @@ class AnkiBangouViewController: UIViewController {
                 startIndex = 0
                 indexCount = 50
             } else if tappedTag == 12 {
+                startIndex = 0
+                indexCount = 100
+            } else if tappedTag == 13 {
                 startIndex = 0
                 indexCount = 100
             }
